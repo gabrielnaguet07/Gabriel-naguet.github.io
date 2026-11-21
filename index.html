@@ -2,57 +2,129 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio de Gabriel Naguet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Naguet — Portfolio Réseaux & Télécoms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="selection-langue">
-        <img src="francais.png" alt="Français" class="drapeau" id="bouton-fr">
-        <img src="anglais.png" alt="English" class="drapeau" id="bouton-en">
+        <button type="button" class="btn-langue actif" id="bouton-fr" title="Français">
+            <img src="francais.png" alt="Français" class="drapeau">
+        </button>
+        <button type="button" class="btn-langue" id="bouton-en" title="English">
+            <img src="anglais.png" alt="English" class="drapeau">
+        </button>
     </div>
 
-    <div class="conteneur">
+    <main class="conteneur">
         
-        <div class="boite entete">
+        <!-- EN-TÊTE -->
+        <header class="boite entete">
+            <div class="badge-statut">
+                <span class="point-vert"></span>
+                <span class="fr">BUT Réseaux & Télécommunications — IUT de Béziers</span>
+                <span class="en">Networks & Telecommunications — IUT of Béziers</span>
+            </div>
+            <img src="moi.jpg" alt="Photo de Gabriel Naguet" class="photo-profil">
             <h1>Gabriel Naguet</h1>
-            <img src="moi.jpg" alt="Photo de Gabriel" class="photo-profil">
-            <p class="fr">Étudiant en Réseaux & Télécommunications à l'IUT de Béziers</p>
-            <p class="en">Networks & Telecommunications student at the IUT of Béziers</p>
-        </div>
+            <p class="sous-titre fr">Étudiant en Réseaux, Cybersécurité & Développement</p>
+            <p class="sous-titre en">Networks, Cybersecurity & Development Student</p>
+            <div class="actions-entete">
+                <a href="#contact" class="bouton-principal fr">Me contacter</a>
+                <a href="#contact" class="bouton-principal en">Contact me</a>
+                <a href="https://linkedin.com/in/gabriel-naguet-a4b05538b" target="_blank" rel="noopener" class="bouton-secondaire">LinkedIn ↗</a>
+            </div>
+        </header>
 
-        <div class="boite">
-            <h2 class="fr">À Propos de Moi</h2>
-            <h2 class="en">About Me</h2>
-            <p class="fr">Passionné par les mathématiques et l'informatique, j'ai développé une forte expertise en programmation, qui me permet de résoudre des problèmes complexes de manière créative. Mon intérêt pour ces disciplines me pousse à approfondir mes connaissances et à explorer les dernières innovations technologiques, afin de créer des solutions efficaces et performantes</p>
-            <p class="en">Passionate about mathematics and computer science, I have developed strong expertise in programming, which allows me to solve complex problems creatively. My interest in these disciplines drives me to deepen my knowledge and explore the latest technological innovations in order to create efficient and effective solutions.</p>
-        </div>
+        <!-- À PROPOS -->
+        <section class="boite">
+            <h2 class="fr">À propos de moi</h2>
+            <h2 class="en">About me</h2>
+            <p class="fr">Passionné par les mathématiques et l'informatique, j'ai développé une solide base en programmation et en administration réseau, ce qui me permet de résoudre des problèmes techniques de manière structurée et créative. Mon intérêt pour ces disciplines me pousse à approfondir mes connaissances et à explorer les infrastructures modernes afin de concevoir des solutions fiables et performantes.</p>
+            <p class="en">Passionate about mathematics and computer science, I have developed a strong foundation in programming and network administration, allowing me to solve technical problems in a structured and creative way. My interest in these fields drives me to deepen my knowledge and explore modern infrastructures to build reliable and efficient solutions.</p>
+        </section>
 
-        <div class="boite">
-            <h2 class="fr">Compétences</h2>
-            <h2 class="en">Skills</h2>
-			
-            <p class="fr"><strong>administration Système : </strong>linux</p>
-			<p class="fr"><strong>Développement d'outils Web : </strong>HTML, CSS et javaScript</p>
-			<p class="fr"><strong>Programmation et Scripts : </strong>python</p>
-			<p class="fr"><strong>Architecture Réseaux : </strong>Adressage IP et Cisco / Packet Tracer</p>
-			
-			<p class="en"><strong>System Administration: </strong> Linux</p>
-			<p class="en"><strong>Web Development Tools: </strong> HTML, CSS and JavaScript</p>
-			<p class="en"><strong>Programming and Scripts: </strong> Python</p>
-			<p class="en"><strong>Network Architecture: </strong> IP Addressing and Cisco / Packet Tracer</p>
-           
-        </div>
+        <!-- COMPÉTENCES -->
+        <section class="boite">
+            <h2 class="fr">Compétences techniques</h2>
+            <h2 class="en">Technical skills</h2>
+            
+            <div class="grille-competences">
+                <div class="carte-competence">
+                    <h3 class="fr">Architecture Réseaux</h3>
+                    <h3 class="en">Network Architecture</h3>
+                    <p class="fr">Adressage IP, sous-réseaux, routage, commutation et simulation sous Cisco Packet Tracer.</p>
+                    <p class="en">IP addressing, subnetting, routing, switching, and simulation with Cisco Packet Tracer.</p>
+                    <div class="tags"><span>IPv4/IPv6</span><span>Cisco</span><span>Packet Tracer</span></div>
+                </div>
 
-        <div class="boite">
-            <h2 class="fr">Pour me contact :</h2>
-            <h2 class="en">To contact me:</h2>
-            <p>Email : <a href="mailto:gabrielnaguet07@gmail.com">gabrielnaguet07@gmail.com</a></p>
-            <p>LinkedIn : <a href="https://linkedin.com/in/gabriel-naguet-a4b05538b" target="_blank">Mon profil</a></p>
-        </div>
+                <div class="carte-competence">
+                    <h3 class="fr">Administration Système</h3>
+                    <h3 class="en">System Administration</h3>
+                    <p class="fr">Gestion d'environnements Linux, ligne de commande, droits utilisateurs et services réseau.</p>
+                    <p class="en">Linux environment management, command line, user permissions, and network services.</p>
+                    <div class="tags"><span>Linux</span><span>Bash</span><span>SSH</span></div>
+                </div>
 
-    </div>
+                <div class="carte-competence">
+                    <h3 class="fr">Programmation & Scripts</h3>
+                    <h3 class="en">Programming & Scripting</h3>
+                    <p class="fr">Automatisation de tâches, algorithmique et traitement de données.</p>
+                    <p class="en">Task automation, algorithms, and data processing.</p>
+                    <div class="tags"><span>Python</span><span>Scripts</span></div>
+                </div>
+
+                <div class="carte-competence">
+                    <h3 class="fr">Développement Web</h3>
+                    <h3 class="en">Web Development</h3>
+                    <p class="fr">Conception d'interfaces web responsives et dynamiques.</p>
+                    <p class="en">Design of responsive and dynamic web interfaces.</p>
+                    <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS / SAÉ -->
+        <section class="boite">
+            <h2 class="fr">Projets académiques (SAÉ)</h2>
+            <h2 class="en">Academic projects</h2>
+            <div class="liste-projets">
+                <div class="projet">
+                    <h3 class="fr">Se présenter sur Internet (SAÉ 1.04)</h3>
+                    <h3 class="en">Building an Online Presence (SAÉ 1.04)</h3>
+                    <p class="fr">Conception, développement et déploiement d'un portfolio bilingue hébergé sur GitHub Pages.</p>
+                    <p class="en">Design, development, and deployment of a bilingual portfolio hosted on GitHub Pages.</p>
+                </div>
+                <div class="projet">
+                    <h3 class="fr">Initiation aux réseaux d'entreprise</h3>
+                    <h3 class="en">Enterprise Network Fundamentals</h3>
+                    <p class="fr">Conception d'un plan d'adressage IP et configuration d'équipements d'interconnexion sous Packet Tracer.</p>
+                    <p class="en">Design of an IP addressing scheme and configuration of network devices using Packet Tracer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <footer class="boite" id="contact">
+            <h2 class="fr">Me contacter</h2>
+            <h2 class="en">Contact me</h2>
+            <p class="fr">N'hésitez pas à me contacter pour toute opportunité de stage, d'alternance ou d'échange technique :</p>
+            <p class="en">Feel free to reach out for any internship, apprenticeship, or technical discussion:</p>
+            <div class="liens-contact">
+                <a href="mailto:gabrielnaguet07@gmail.com" class="carte-lien">
+                    <strong>Email</strong>
+                    <span>gabrielnaguet07@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/gabriel-naguet-a4b05538b" target="_blank" rel="noopener" class="carte-lien">
+                    <strong>LinkedIn</strong>
+                    <span>gabriel-naguet ↗</span>
+                </a>
+            </div>
+        </footer>
+
+    </main>
 
     <script>
         const btnFr = document.getElementById('bouton-fr');
@@ -60,17 +132,20 @@
         const textesFr = document.querySelectorAll('.fr');
         const textesEn = document.querySelectorAll('.en');
 
-        textesEn.forEach(t => t.style.display = 'none');
+        function changerLangue(lang) {
+            const estFr = lang === 'fr';
+            textesFr.forEach(el => el.style.display = estFr ? '' : 'none');
+            textesEn.forEach(el => el.style.display = estFr ? 'none' : '');
+            btnFr.classList.toggle('actif', estFr);
+            btnEn.classList.toggle('actif', !estFr);
+            document.documentElement.lang = lang;
+        }
 
-        btnFr.addEventListener('click', () => {
-            textesFr.forEach(t => t.style.display = 'block');
-            textesEn.forEach(t => t.style.display = 'none');
-        });
+        // Initialisation en français
+        changerLangue('fr');
 
-        btnEn.addEventListener('click', () => {
-            textesEn.forEach(t => t.style.display = 'block');
-            textesFr.forEach(t => t.style.display = 'none');
-        });
+        btnFr.addEventListener('click', () => changerLangue('fr'));
+        btnEn.addEventListener('click', () => changerLangue('en'));
     </script>
 
 </body>
